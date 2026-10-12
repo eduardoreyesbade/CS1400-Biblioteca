@@ -1,3 +1,12 @@
+
+##########################
+# Cybersecurity - CS1400
+# Eduardo Reyes
+# 10/06/2026)
+# Tarea: Proyecto M06
+##########################
+# 
+# 
 # ==========================================
 # TAREA Turtle 🐢
 # ==========================================
@@ -32,11 +41,22 @@ import turtle
 
 # Escribe aquí tu código
 
+pantalla = turtle.Screen()
+pantalla.bgcolor("lightyellow")
+pantalla.title("Funciones y Figuras")
+
+t = turtle.Turtle()
+t.shape("turtle")
+t.speed(3)
+
+
 # TODO 2
 #  Crea la tortuga usando make_turtle().
 #  La ventana debe tener 400 de alto y 400 de ancho.
 
 # Escribe aquí tu código
+
+pantalla.setup(400, 400)
 
 # Captura de Pantalla, nombralo "TUNOMBRE_1_2" y guardalo en la carpeta M06
 
@@ -50,6 +70,17 @@ import turtle
 
 # Escribe aquí tu código
 
+def mover(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+# comence con 100 pero mueve todo a la derecha y no se ve, por ende, la adelante 100 mejor moverla a la izquierda, para que se vea mejor.
+
+# Avanza 100 pasos desde el centro: dibuja una línea hacia la derecha
+t.forward(100)
+
+# Desde el centro de la ventana, mueve la tortuga a la posición (100, 0) 
+mover(100, 0)
 
 # ------------------------------------------
 # Girar la tortuga
@@ -61,6 +92,9 @@ import turtle
 
 # Escribe aquí tu código
 
+t.left(90)
+t.color("black")
+t.forward(100)
 
 # ------------------------------------------
 # Dibujar un cuadrado 
@@ -79,6 +113,24 @@ print("Dibujando un cuadrado...")
 
 # Escribe aquí tu código
 
+# Nos movemos a una zona libre y apuntamos hacia la derecha (0 grados)
+mover(-50, -50)
+t.setheading(0)
+
+# Un cuadrado = repetir 4 veces: avanzar un lado y girar 90 grados.
+# Al completar los 4 giros (4 x 90 = 360) termina donde empezó.
+t.left(90)
+t.color("black")
+t.forward(100)
+t.left(90)
+t.color("black")
+t.forward(100)
+t.left(90)
+t.color("black")
+t.forward(100)
+t.left(90)
+t.color("black")
+t.forward(100)
 
 # ------------------------------------------
 # Paso EXTRA (opcional)
@@ -90,6 +142,15 @@ print("Dibujando un cuadrado...")
 # - Un giro completo es 360 grados.
 # - ¿Cuánto debe girar en cada esquina?
 
+t.left(90)
+t.color("black")
+t.forward(100)
+t.left(30)
+t.color("black")
+t.forward(100)
+t.left(120)
+t.color("black")
+t.forward(100)
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
 pantalla.exitonclick()

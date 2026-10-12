@@ -1,12 +1,19 @@
 """ TODO 1 agregar tu nombre fecha titulo de una manera bonita """
 
+##########################
+# Cybersecurity - CS1400
+# Eduardo Reyes
+# 10/06/2026)
+# Tarea: Proyecto M06
+##########################
+
 
 # Importamos la biblioteca turtle (ya viene incluida en Python)
 import turtle
 
 # Configuración de la pantalla y la tortuga
 pantalla = turtle.Screen() # # Usamos sintaxis de punto . para acceder a la función Screen()
-pantalla.bgcolor("lightcyan")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
+pantalla.bgcolor("#000000")  # TODO 2 Cambia el color de fondo usando la función bgcolor()
 pantalla.title("Titulo") #TODO 3 Asigna un título a la ventana usando title()
 
 # Corre el programa hasta este punto utilizando """ """ o # para asegurar que funcione bien.
@@ -14,7 +21,7 @@ pantalla.title("Titulo") #TODO 3 Asigna un título a la ventana usando title()
 # solo una t para hacer menos codigo despues. usaremos la t variable para usar otras funciones.
 t = turtle.Turtle()
 t.shape("turtle")  # Forma de la tortuga puede ser cualquier otro nombre.
-t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
+t.speed(1)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 
 # TODO 4 Utiliza """ """ para correr el programa hasta este punto y toma una captura de pantalla. Luego lo guardaras entre la carpeta M6
 
@@ -22,8 +29,10 @@ t.speed(3)         # Velocidad del dibujo (1 es lento, 10 es rápido)
 # EJEMPLO: Dibujar la base de la casa (un cuadrado azul)
 # =============================================================
 
-t.color("darkblue", "lightblue")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
+t.color("#A92525", "#CCE320")  # (Color del borde, Color de relleno - los puedes ajustar si deseas - TODO 5 los colores son parametros o argumentos?)
 t.begin_fill()
+
+# los colores son argumentos. 
 
 # TODO 6 Este for loop que hace?
 for _ in range(4):
@@ -31,7 +40,10 @@ for _ in range(4):
     t.left(90)      # 
 
 # TODO 7 En que linea de codigo empezo el fill? o relleno?
+# 42?
+
 t.end_fill()
 
 # Mantiene la ventana abierta hasta que hagas clic en ella
 pantalla.exitonclick()
+
