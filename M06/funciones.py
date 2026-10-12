@@ -1,3 +1,13 @@
+
+##########################
+# Cybersecurity - CS1400
+# Eduardo Reyes
+# 10/11/2026)
+# Tarea: Funciones Reusables
+##########################
+# 
+# 
+# 
 # --------------------------------------------------------------------------
 #          FUNCIÓN PARA SIMULAR EL LANZAMIENTO DE UN DADO
 # --------------------------------------------------------------------------
@@ -16,6 +26,10 @@
 # --------------------------------------------------------------------------
 
 # TODO: Paso 1. Importa el módulo 'random'.
+import random
+
+# Numero de caras del dado. Cambialo si usas un dado distinto (4, 8, 12, 20...).
+numero_caras_dado = 16
 
 
 def lanzar_dado():
@@ -29,17 +43,24 @@ def lanzar_dado():
     """
     # TODO: Paso 2. Genera un número aleatorio entre 1 y 6.
     #Guardalo en una variable llamada 'resultado'.
- 
+    resultado = random.randint(1, numero_caras_dado)
+    
     # TODO: Paso 3. Devuelve el resultado.
-    return  # Reemplaza esto con la variable que contiene el resultado
+    return resultado
+ # Reemplaza esto con la variable que contiene el resultado
 
 
 # --- Bloque para probar tu función ---
 # Este código es para que pruebes tu función.
+
+caras = numero_caras_dado -1
+
 if __name__ == "__main__":
-    print("Lanzando el dado 5 veces:")
+    print(f"Lanzando un dado de {numero_caras_dado} caras {caras} veces:")
 
     # Usamos un bucle para llamar a la función varias veces
-    for i in range(5):
+
+    for i in range(caras):
         resultado_lanzamiento = lanzar_dado()
         print(f"Lanzamiento {i + 1}: {resultado_lanzamiento}")
+        

@@ -1,0 +1,122 @@
+
+##########################
+# Cybersecurity - CS1400
+# Eduardo Reyes
+# 10/11/2026)
+# Tarea: Funciones Reusables
+##########################
+# 
+# =============================================================
+# Parte 1: Funciones sin retorno (Acciones directas)
+# =============================================================
+
+def mostrar_bienvenida(nombre):
+    """Muestra un mensaje de bienvenida personalizado."""
+    print(f"¡Hola, {nombre}! Bienvenido a clase hoy.")
+
+# PREGUNTAS:
+# 1. En la función mostrar_bienvenida(nombre), ¿cómo se llama la variable "nombre" dentro de los paréntesis?
+# R: Parámetro creo que se llama. 
+
+# 2. ¿Qué le falta al código para ser completamente reutilizable?
+# R: Docstring, por ejelpo.  
+# R: """
+# R: Devuelve un mensaje de saludo personalizado.
+# R: """
+
+# =============================================================
+# Parte 2: Funciones con retorno (Procesamiento de datos)
+# =============================================================
+
+def calcular_descuento(precio, porcentaje=10):
+    """Calcula el precio final después de aplicar un descuento porcentual."""
+    descuento = precio * (porcentaje / 100)
+    precio_final = precio - descuento
+    return float(precio_final)
+
+def es_par(numero):
+    """Devuelve True si el número es par y False si es impar."""
+    return numero % 2 == 0
+
+# PREGUNTAS:
+# 3. ¿Qué palabra clave (keyword) de Python se utiliza para indicar que estamos definiendo una función?
+# R: def
+
+# 4. Escribe los nombres de las dos funciones definidas arriba.
+# R: Son: calcular_descuento y es_par, son 2 defs
+
+# 5. ¿Qué sucede cuando llamas a la función pasando solo un argumento, como calcular_descuento(100)?
+# R: error probablemente porque el def no va a funcionar si no tiene todos los parametros. 
+
+# 6. ¿Qué ocurre si pasas dos argumentos, como calcular_descuento(200, 20)?
+# R: Si usamos calcular_descuento, al precio de 200 le aplicara un despuento del 20% y nos dara el precio final.
+
+
+# =============================================================
+# Parte 3: Pruebas de ejecución
+# =============================================================
+
+print("--- PRUEBA 1: Mostrar Bienvenida ---")
+mostrar_bienvenida("Ana")
+mostrar_bienvenida("Carlos")
+
+print("\n--- PRUEBA 2: Cálculo de Descuentos ---")
+
+compra_1 = calcular_descuento(100)
+print(f"Precio con descuento por defecto: ${compra_1}")
+precio_final = compra_1 + 5
+print(precio_final)
+
+
+compra_2 = calcular_descuento(200, 20)
+print(f"Precio con 20% de descuento: ${compra_2}")
+
+# PREGUNTAS:
+# 7. Escribe el pseudocódigo de las funciones en la Parte 2.
+# R: Define la funcion "calcular_descuento" con dos parametros: precio y porcentaje
+# R: calcula la variable "descuento" en base al calulo d precio * (porcentaje / 100)
+# R: determina el precio final
+# R: entrega el valor el precio final
+
+# 8. Explícale una de las dos a tu compañera(o) de al lado e incluye el propósito del programa. Tu compañera(o) te debe explicar lo siguiente. Lleguen a un acuerdo para agregar lo esencial como comentarios.
+
+
+# 9. Cambia las funciones para que acepten decimales en el precio.
+# Use float
+
+# =============================================================
+# Parte 4: Alcance (Scope) y Retorno
+# =============================================================
+
+# La función mostrar_bienvenida() usa print(), mientras que calcular_descuento() usa return.
+# Si asignas la llamada de la bienvenida a una variable:
+
+resultado = mostrar_bienvenida("Julio")
+print(resultado)
+
+
+# PREGUNTAS:
+# 10. ¿Qué valor se guarda en la variable 'resultado' y por qué?
+# R: Se guarda None porque la función mostrar_bienvenida no tiene un return, solo imprime un mensaje.
+
+# 11. ¿Por qué es necesario usar return en calcular_descuento() para poder guardar el precio final en compra_1 y compra_2?
+# R: Porque retun permite que se ejecuten los calculos y devuelvan los resultados. 
+
+# 12. Intenta ejecutar la siguiente línea al final del documento: print(descuento) ¿Qué error muestra Python?
+# No muestra error, dice None, porque no se pudo ejecutar la funcion. 
+
+# 13. ¿Por qué la variable 'descuento' no es accesible fuera de la función?
+# R: Sera porque esta dentro de una funcione llamada calcular_descuento (indentada) y no es global.
+
+# 14. ¿Qué ocurre si dentro de calcular_descuento cambias 'return precio_final' por 'print(precio_final)' e intentas sumar 'compra_1 + 5'?
+# #: Funciona
+
+# 15. Investiga: ¿Cómo podrías llamar a la función 'calcular_descuento' asignando el porcentaje mediante su nombre de parámetro (keyword argument)?
+# R: asi...
+
+"""Calcula el precio final después de aplicar un descuento porcentual al precio dada y porcetaje dado"""
+nuevo = calcular_descuento(precio=200, porcentaje=20)
+print(nuevo)
+
+# 16. Añade un "docstring" (comentario multilínea con """) dentro de cada función para explicar brevemente qué hace.
+# R: Ya lo hice en la parte 2.
