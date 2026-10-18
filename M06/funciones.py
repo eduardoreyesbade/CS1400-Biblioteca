@@ -56,11 +56,10 @@ def lanzar_dado():
 caras = numero_caras_dado -1
 
 if __name__ == "__main__":
-    print(f"Lanzando un dado de {numero_caras_dado} caras {caras} veces:")
+    print("Lanzando el dado 5 veces:")
 
     # Usamos un bucle para llamar a la función varias veces
-
-    for i in range(caras):
+    for i in range(5):
         resultado_lanzamiento = lanzar_dado()
         print(f"Lanzamiento {i + 1}: {resultado_lanzamiento}")
         
