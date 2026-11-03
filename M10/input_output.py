@@ -39,13 +39,18 @@ REFRANES = {
 
     "Agua que no has de beber, dejala correr.":
         "Si algo no te conviene o no te toca, no te metas.",
+
+    "Al mal tiempo, buena cara.":
+        "Que pese a que todo vaya mal, hay que mantener el animo y la esperanza.",
 }
 
 
 def refran_al_azar():
-    """Devuelve una pareja (refran, significado) elegida al azar."""
-    # list(REFRANES.items()) convierte el diccionario en una lista de parejas.
-    # random.choice() elige una de esas parejas al azar.
+    """
+    Devuelve una pareja (refran, significado) elegida al azar.
+    """
+    # list(REFRANES.items()) # convierte el diccionario en una lista de parejas.
+    # random.choice() # elige una de esas parejas al azar.
     return random.choice(list(REFRANES.items()))
 
 
@@ -87,7 +92,10 @@ def parte_uno_entrada_salida():
     nombre = input("Hola! Como te llamas? ")
 
     # TODO ¿Qué hace este bloque try/except ValueError?
+    # Validar si el dato de los anos es un numero 
+
     # ¿Qué pasaría si el usuario escribe “veinte” y quitamos ese bloque?
+    # Muestra un error de ValueError y el programa se detiene.
 
     try:
         edad = int(input("Cuantos anos tienes? "))
@@ -104,6 +112,10 @@ def parte_uno_entrada_salida():
     print(f"Mucho gusto, {nombre}!")                 # f-string
     
     # TODO ¿Como usamos acentos en espanol, otra vez?
+    
+    # Al inicio tenemos # -*- coding: utf-8 -*-
+
+
     print("Tienes", edad, "anos.")                   # comas
     print("Tu comida favorita es " + comida + ".")   # concatenacion con +
 
@@ -131,6 +143,10 @@ def parte_uno_entrada_salida():
 # PARTE 2 (EXTRA- si tienes tiempo): CONSUMIR UNA API JSON
 # ==========================================================
 #TODO ¿Que hace este api?
+
+# JSONPlaceholder es una API gratuita de prueba: le pedimos un usuario
+# por numero (1-10) y nos devuelve sus datos falsos en formato JSON.
+
 def parte_dos_api_json(nombre):
     """Consulta una API publica que responde en formato JSON."""
 

@@ -2,6 +2,8 @@
 
 Diccionarios y funciones (los refranes)
 4. ¿Por qué guardamos los refranes en un diccionario y no en una lista? ¿Qué ventaja tiene que el refrán sea la clave y el significado el valor?
+R: yo creo porque de esta forma 
+
 5. ¿Para qué sirven las funciones decir_refran() y decir_refran_especifico()? ¿En qué se diferencian?
 6. Si quisieras agregar un refrán de tu propia abuela, ¿qué línea tendrías que modificar? ¿Hay que cambiar algo más?
 
