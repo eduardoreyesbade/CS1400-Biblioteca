@@ -12,8 +12,12 @@
 
 def agregar_producto(inventario, nombre, precio):
     """
-   
+    Agrega un producto al inventtario o actualiza su precio si ya existe.
+
+    Recibe : el diccionario de inventario,  nombre del producto y  precio.
+    Devuelve: True si se guardó, False si el precio no era un número.
     """
+
     try:
         # Convertimos a float para asegurar que sea un número
         precio_num = float(precio)
@@ -25,13 +29,16 @@ def agregar_producto(inventario, nombre, precio):
 
 def buscar_precio(inventario, nombre):
     """
+    Buscar el precio de un producto en el inventario.
+
     """
     # Usamos .get() para evitar que el programa falle si la llave no existe
     return inventario.get(nombre, None)
 
 def listar_productos(inventario):
     """
-   
+    muestra o lista los productos.. sino hay nada, muestra vacia en la pantalla. 
+
     """
     if not inventario:
         print("\n> El inventario está vacío.")
